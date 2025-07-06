@@ -6,9 +6,9 @@
 
 ##### Vídeos|	PlayList YouTube
 
-&nbsp;	
+	
 
-1. &nbsp;	**VScode** (*instalação Windows*)
+1\. &nbsp;	**VScode** (*instalação Windows*)
 
 
 
