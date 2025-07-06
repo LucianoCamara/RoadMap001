@@ -1,0 +1,112 @@
+Instalação e Configuração Windows
+
+---
+
+## 🛠️ Como Instalar o Git no Windows de Forma Correta
+
+Se você está começando no mundo do desenvolvimento ou quer melhorar seu fluxo de trabalho com versionamento de código, o Git é uma ferramenta essencial. Aqui está um guia simples e direto para instalar o Git no Windows corretamente.
+
+### 📥 Passo 1: Baixar o Instalador do Git
+- Acesse o site oficial: [https://git-scm.com](https://git-scm.com)
+- Clique em **“Download for Windows”** — o site detecta automaticamente sua versão do sistema.
+- O download do instalador começará automaticamente.
+
+### 🧰 Passo 2: Executar o Instalador
+- Dê dois cliques no arquivo `.exe` baixado.
+- Se aparecer um alerta do controle de conta de usuário (UAC), clique em **"Sim"** para continuar.
+
+### ⚙️ Passo 3: Configurações durante a Instalação
+Durante a instalação, há várias opções. As principais recomendações são:
+
+- **Select Components**: mantenha selecionadas as opções padrão.
+- **Editor padrão do Git**: pode escolher entre o Vim (padrão) ou outro, como o Notepad++.
+- **Adjusting your PATH environment**: selecione **“Git from the command line and also from 3rd-party software”**.
+- **Choosing HTTPS transport backend**: escolha **“Use the OpenSSL library”**.
+- **Configurar o final de linha**: selecione **“Checkout Windows-style, commit Unix-style line endings”**.
+- **Terminal emulator**: escolha **“Use Windows' default console window”**.
+
+Você pode continuar com as opções padrão se não tiver certeza — elas são seguras para a maioria dos usuários.
+
+### ✅ Passo 4: Finalizar a Instalação
+- Após passar por todas as etapas, clique em **“Install”**.
+- Ao fim do processo, clique em **“Finish”** para encerrar.
+
+### 🧪 Passo 5: Verificar Instalação
+Abra o Prompt de Comando ou PowerShell e digite:
+
+```bash
+git --version
+```
+
+Se a instalação estiver correta, você verá a versão do Git instalada.
+
+---
+
+Perfeito, Agora que o Git já está instalado no seu Windows, vamos configurá-lo corretamente via terminal para que você possa começar a usá-lo com seus repositórios de forma organizada e segura. Isso só precisa ser feito uma vez por máquina (ou usuário). 👇
+
+---
+
+## 🧩 Configuração Inicial do Git via Terminal
+
+### 🔑 1. Configurar Nome de Usuário
+Esse será o nome associado aos seus commits.
+
+```bash
+git config --global user.name "Seu Nome"
+```
+
+*Substitua* `"Seu Nome"` pelo seu nome real ou pelo nome que deseja exibir nos commits.
+
+---
+
+### 📧 2. Configurar o E-mail
+O e-mail deve ser o mesmo usado na sua conta do GitHub ou outro serviço Git remoto.
+
+```bash
+git config --global user.email "seu@email.com"
+```
+
+---
+
+### 🖊️ 3. Definir Editor de Texto Padrão (opcional)
+Por padrão, o Git usa o Vim, mas você pode escolher outro, como o Notepad++ ou Visual Studio Code:
+
+```bash
+git config --global core.editor "code --wait"
+```
+
+> Isso define o Visual Studio Code como editor padrão, mas você pode substituir `code --wait` por `notepad`, `nano`, etc.
+
+---
+
+### 🔄 4. Verificar as Configurações Atuais
+
+```bash
+git config --list
+```
+
+Esse comando mostra todas as configurações atuais do Git. É ótimo para conferir se tudo foi salvo corretamente.
+
+---
+
+### 🗂️ 5. Configurar o Comportamento de Line Endings (opcional mas recomendado)
+
+Ajuda a evitar problemas ao trabalhar com sistemas operacionais diferentes:
+
+```bash
+git config --global core.autocrlf true
+```
+
+---
+
+### 🔐 6. (Extra) Habilitar Cache de Credenciais (útil no Windows)
+
+Isso evita que você precise digitar login e senha toda vez ao usar o Git com HTTPS:
+
+```bash
+git config --global credential.helper manager
+```
+
+> O Git Credential Manager é instalado automaticamente com o Git for Windows.
+
+---
